@@ -1,9 +1,9 @@
 module Api
   class FruitsController < ApplicationController
     def show
-      puts FRUITS[params[:id].to_i]
+      index = params[:id].to_i - 1
       render json: {
-        data: FRUITS[params[:id].to_i],
+        data: FRUITS[index],
       }
     end
   end
